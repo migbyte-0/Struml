@@ -2,8 +2,7 @@
 Structure + UML = Struml
 Turn your inline code comments into glorious ASCII (or PNG) diagrams with Mermaid & Neovim.
 
-
-         _
+```lua         _
        _( )_    S T R U M L
      .-       -.  Where code meets diagrams
     /           \
@@ -12,7 +11,7 @@ Turn your inline code comments into glorious ASCII (or PNG) diagrams with Mermai
     \   .--.   /
      '-._____.-'
          ( )
-
+```
 
 # Table of Contents
 # Table of Contents

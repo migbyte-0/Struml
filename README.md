@@ -28,7 +28,11 @@ Turn your inline code comments into glorious ASCII (or PNG) diagrams with Mermai
    * [Optional image.nvim Integration](#optional-imagenvim-integration)
 8. [License](#license)
 
+
+
 ---
+
+
 
 # Why Struml?
 Because your code is more than just text! Sometimes you want a quick UML-esque flow or sequence or graph to illustrate the logic inside your source. Struml uses your inline comments, hunts for lines containing diagram: (or any custom pattern), and pops open a floating window with a diagram.
@@ -59,7 +63,11 @@ If any external command fails (like mmdc or ascii-image-converter), you’ll see
 ## **Caching**
 If the same diagram text hasn’t changed, Struml skips re-rendering. We keep a small in-memory cache to speed things up.
 
+
+
 ---
+
+
 
 # Installation:
 using Lazy
@@ -94,7 +102,11 @@ use {
   end
 }
 ```
+
+
 ---
+
+
 
 # Usage
 
@@ -122,7 +134,11 @@ func main() {
 
 Upon saving (or :StrumlRender), watch a floating window pop up with your diagram. Magic!
 
+
+
 ---
+
+
 
 # Configuration
 
@@ -140,7 +156,11 @@ All default settings live in `lua/strum/config.lua`. When calling `require("stru
 | `output_ext`           | `".png"`                                 | File extension for the generated Mermaid output (usually `.png`).                              |
 | `debug`                | `false`                                  | If `true`, we print debug logs.                                                                |
 
+
+
 ---
+
+
 
 ## Dependencies
 
@@ -181,7 +201,11 @@ If something goes wrong (like Mermaid or ascii-image-converter fails), Struml wi
 # Optional image.nvim Integration
 If you set renderer = "image", Struml calls image.nvim to show the actual PNG in a floating window. Make sure you have that plugin installed & configured. If you don’t, we’ll show an error message telling you to either install it or switch back to ASCII mode.
 
+
+
 ---
+
+
 
 # License
 Struml is distributed under the MIT License, which means you are free to clone, modify, redistribute, or build upon this project. See LICENSE for the full text.
@@ -196,7 +220,11 @@ including without limitation the rights to use, copy, modify, merge, publish, di
 sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 
 furnished to do so, subject to the following conditions:
 ```
+
+
 ---
+
+
 
 # Happy diagramming!
 Feel free to open PRs, issues, or share your feedback. Let’s keep our code flows clear and our ASCII art fancy.

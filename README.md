@@ -48,11 +48,11 @@ Place multiple diagram: comments in a file. Struml can either:
    * Combine them all into a single mega-flowchart.
      
 ## **Powered by Mermaid**
-We use the Mermaid CLI (mmdc) to generate PNG images of your diagrams, meaning you get all of Mermaid's syntax possibilities.
+We use the [Mermaid CLI (mmdc)](https://github.com/mermaid-js/mermaid-cli) to generate PNG images of your diagrams, meaning you get all of Mermaid's syntax possibilities.
 
 ## **ASCII or PNG**
-   * ASCII Mode: We'll pipe that PNG into ascii-image-converter and show it inside a floating buffer.
-   * Image Mode: We'll display the PNG via image.nvim in a floating window (actual rendered image!).
+   * **ASCII Mode**: We'll pipe that PNG into [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter) and show it inside a floating buffer.
+   * **Image Mode**: We'll display the PNG via [image.nvim](https://github.com/your-image-nvim-repo) in a floating window (actual rendered image!).
      
 ## **Flexible Syntax**
 Out of the box, it detects lines like // diagram: flow or /// diagram: flow. You can easily add more patterns if you use # diagram: or -- diagram: or anything else.
@@ -148,7 +148,7 @@ All default settings live in `lua/strum/config.lua`. When calling `require("stru
 |------------------------|-------------------------------------------|-------------------------------------------------------------------------------------------------|
 | `comment_patterns`     | `{ "%s*/+%s*diagram:%s*(.*)" }`          | Table of Lua patterns used to detect lines with diagram text.                                  |
 | `display_mode`         | `"separate"`                             | Either `"separate"` (one float per diagram) or `"combined"` (all diagrams merged).             |
-| `renderer`             | `"ascii"`                                | `"ascii"` uses ascii-image-converter, `"image"` uses image.nvim.                               |
+| `renderer`             | `"ascii"`                                | `"ascii"` uses ascii-image-converter, `"image"` uses [image.nvim](https://github.com/your-image-nvim-repo)                          |
 | `cli.mmdc`             | `"mmdc"`                                 | Mermaid CLI executable name/path.                                                              |
 | `cli.ascii_converter`  | `"ascii-image-converter"`                | ascii-image-converter executable name/path.                                                    |
 | `mmdc_args`            | `{ "--scale", "1" }`                     | Extra arguments to pass to the mmdc command.                                                   |
@@ -199,7 +199,7 @@ Struml stores the rendered diagram in a small in-memory Lua table keyed by a has
 If something goes wrong (like Mermaid or ascii-image-converter fails), Struml will pop up an error in Neovim. The floating window won't appear, but you’ll know why it failed so you can fix the issue quickly.
 
 # Optional image.nvim Integration
-If you set renderer = "image", Struml calls image.nvim to show the actual PNG in a floating window. Make sure you have that plugin installed & configured. If you don’t, we’ll show an error message telling you to either install it or switch back to ASCII mode.
+If you set renderer = "image", Struml calls [image.nvim](https://github.com/your-image-nvim-repo) to show the actual PNG in a floating window. Make sure you have that plugin installed & configured. If you don’t, we’ll show an error message telling you to either install it or switch back to ASCII mode.
 
 
 

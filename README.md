@@ -1,4 +1,4 @@
-# ![Done by migbyte](https://github.com/migbyte-0/Struml/blob/main/migbyte.svg)
+<img src="https://github.com/migbyte-0/Struml/blob/main/migbyte.svg" alt="Done by migbyte" width="100" />
 
 # Struml
 Structure + UML = Struml

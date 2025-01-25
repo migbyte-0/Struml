@@ -23,7 +23,6 @@ Turn your inline code comments into glorious ASCII (or PNG) diagrams with Mermai
 ```
 
 # Table of Contents
-# Table of Contents
 1. [Why Struml?](#why-struml)
 2. [Features](#features)
 3. [Installation](#installation)

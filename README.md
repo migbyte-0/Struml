@@ -1,8 +1,8 @@
-<div style="display: flex; align-items: center;">
-  <img src="https://github.com/migbyte-0/Struml/blob/main/migbyte.svg" alt="    Done by migbyte" width="250" />
-  <span style="margin-left: 10px; font-size: 20px; font-weight: 900;">
+<div align="center">
+  <img src="https://github.com/migbyte-0/Struml/blob/main/migbyte.svg" alt="Done by Migbyte" width="250" />
+  <p style="font-size: 20px; font-weight: bold;">
     Done by <span style="color: lightgreen;">Migbyte</span> Team
-  </span>
+  </p>
 </div>
 
 

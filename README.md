@@ -27,33 +27,36 @@ Turn your inline code comments into glorious ASCII (or PNG) diagrams with Mermai
    * [Error Handling](#error-handling)
    * [Optional image.nvim Integration](#optional-imagenvim-integration)
 8. [License](#license)
+
+---
+
 # Why Struml?
 Because your code is more than just text! Sometimes you want a quick UML-esque flow or sequence or graph to illustrate the logic inside your source. Struml uses your inline comments, hunts for lines containing diagram: (or any custom pattern), and pops open a floating window with a diagram.
 
 No more alt-tabbing to external diagram tools and forgetting to keep them updated. With Struml, you can maintain and visualize diagrams right where they belong—in your code.
 
 # Features
-## * Multiple Diagram Detection
+## **Multiple Diagram Detection**
+
 Place multiple diagram: comments in a file. Struml can either:
 
    * Show each diagram in its own floating window, or
    * Combine them all into a single mega-flowchart.
      
-## * Powered by Mermaid
+## **Powered by Mermaid**
 We use the Mermaid CLI (mmdc) to generate PNG images of your diagrams, meaning you get all of Mermaid's syntax possibilities.
 
-## * ASCII or PNG
-
+## **ASCII or PNG**
    * ASCII Mode: We'll pipe that PNG into ascii-image-converter and show it inside a floating buffer.
    * Image Mode: We'll display the PNG via image.nvim in a floating window (actual rendered image!).
      
-## * Flexible Syntax
+## **Flexible Syntax**
 Out of the box, it detects lines like // diagram: flow or /// diagram: flow. You can easily add more patterns if you use # diagram: or -- diagram: or anything else.
 
-## * Error Handling
+## **Error Handling**
 If any external command fails (like mmdc or ascii-image-converter), you’ll see a helpful error in Neovim instead of silent failures.
 
-## * Caching
+## **Caching**
 If the same diagram text hasn’t changed, Struml skips re-rendering. We keep a small in-memory cache to speed things up.
 
 ---
@@ -91,6 +94,7 @@ use {
   end
 }
 ```
+---
 
 # Usage
 
@@ -118,6 +122,8 @@ func main() {
 
 Upon saving (or :StrumlRender), watch a floating window pop up with your diagram. Magic!
 
+---
+
 # Configuration
 
 All default settings live in `lua/strum/config.lua`. When calling `require("strum").setup(...)`, you can override any of these:
@@ -134,24 +140,26 @@ All default settings live in `lua/strum/config.lua`. When calling `require("stru
 | `output_ext`           | `".png"`                                 | File extension for the generated Mermaid output (usually `.png`).                              |
 | `debug`                | `false`                                  | If `true`, we print debug logs.                                                                |
 
-# Dependencies
-1. Mermaid CLI
-   * Install via NPM:
-```npm
-npm install -g @mermaid-js/mermaid-cli
-```
-   * Ensures the mmdc command is available in your $PATH.
+---
 
-2. ascii-image-converter (if using renderer = "ascii")
-   * You might install it via cargo or from your distribution’s package manager, e.g.:
+## Dependencies
 
-```npm
-cargo install ascii-image-converter
-```
-   * This will give you the ascii-image-converter command in $PATH.
+1. [Mermaid CLI](https://github.com/mermaid-js/mermaid-cli)
+   - **Install via NPM**:
+     ```bash
+     npm install -g @mermaid-js/mermaid-cli
+     ```
+   - Ensures the `mmdc` command is available in your `$PATH`.
 
-3. image.nvim (if using renderer = "image")
-   * Make sure it’s installed and available in your Neovim runtime.
+2. [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter) (if using `renderer = "ascii"`)
+   - You might install it via `cargo` or from your distribution’s package manager, e.g.:
+     ```bash
+     cargo install ascii-image-converter
+     ```
+   - This will give you the `ascii-image-converter` command in `$PATH`.
+
+3. [image.nvim](https://github.com/your-image-nvim-repo) (if using `renderer = "image"`)
+   - Make sure it’s installed and available in your Neovim runtime.
 
 
 # Advanced Topics :
@@ -173,6 +181,8 @@ If something goes wrong (like Mermaid or ascii-image-converter fails), Struml wi
 # Optional image.nvim Integration
 If you set renderer = "image", Struml calls image.nvim to show the actual PNG in a floating window. Make sure you have that plugin installed & configured. If you don’t, we’ll show an error message telling you to either install it or switch back to ASCII mode.
 
+---
+
 # License
 Struml is distributed under the MIT License, which means you are free to clone, modify, redistribute, or build upon this project. See LICENSE for the full text.
 ```vbnet 
@@ -186,6 +196,8 @@ including without limitation the rights to use, copy, modify, merge, publish, di
 sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 
 furnished to do so, subject to the following conditions:
 ```
+---
+
 # Happy diagramming!
 Feel free to open PRs, issues, or share your feedback. Let’s keep our code flows clear and our ASCII art fancy.
 Struml on!

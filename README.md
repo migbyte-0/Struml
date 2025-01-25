@@ -1,7 +1,10 @@
 <div style="display: flex; align-items: center;">
-  <img src="https://github.com/migbyte-0/Struml/blob/main/migbyte.svg" alt="Done by migbyte" width="150" />
-  <span style="margin-left: 10px; font-size: 18px;">Done by Migbyte Team</span>
+  <img src="https://github.com/migbyte-0/Struml/blob/main/migbyte.svg" alt="Done by migbyte" width="250" />
+  <span style="margin-left: 10px; font-size: 20px; font-weight: 900;">
+    Done by <span style="color: lightgreen;">Migbyte</span> Team
+  </span>
 </div>
+
 
 # Struml
 Structure + UML = Struml

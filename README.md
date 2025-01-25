@@ -1,5 +1,4 @@
-# ![Done by migbyte]([https://raw.githubusercontent.com/your-username/your-repo/main/path-to-your-icon.svg](https://github.com/migbyte-0/Struml/blob/main/migbyte.svg))
-
+# ![Done by migbyte](https://github.com/migbyte-0/Struml/blob/main/migbyte.svg)
 
 # Struml
 Structure + UML = Struml
